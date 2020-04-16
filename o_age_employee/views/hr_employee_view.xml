@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="form_hr_employee_view_1" model="ir.ui.view">
+            <field name="name">form.hr.employee.view.1</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="1001"/>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='personal_information']/group[1]/group[4]/field[@name='birthday']" position="replace">
+                    <label for="birthday" string="Date of Birth"/>
+                    <div class="o_row">
+                        <field name="birthday"/>
+                        <strong class="ml-2 mr-2">Age</strong>
+                        <field name="age" class="o_read_only"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
