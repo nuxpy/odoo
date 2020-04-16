@@ -1,2 +1,1 @@
-# odoo
-# Módulos para la versión 12
+# odoo - Módulos para la versión 12
