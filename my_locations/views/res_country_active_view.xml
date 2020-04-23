@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="tree_res_country_active_view" model="ir.ui.view">
+            <field name="name">tree.res.country.active</field>
+            <field name="model">res.country.active</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree string="Contries to Import">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="to_import"/>
+                    <field name="imported"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="form_res_country_active_view" model="ir.ui.view">
+            <field name="name">form.res.country.active</field>
+            <field name="model">res.country.active</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Country to Import">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" required="1" placeholder="Name of country"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code" required="1"/>
+                                <field name="to_import"/>
+                                <field name="imported" readonly="1"/>
+                            </group>
+                            <group>
+                                <strong>Warning: This model works when the country will be imported from <a href="http://www.geonames.org/">GeoNames</a> database. Before create a new record, check if the locations, provinces, and states of a country that you want to import is in the mentioned website.</strong>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="filter_res_country_active_view" model="ir.ui.view">
+            <field name="name">filter.res.country.active</field>
+            <field name="model">res.country.active</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <search string="Country">
+                    <field name="name" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_res_country_active_view" model="ir.actions.act_window">
+            <field name="name">Import Locations by Country</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.country.active</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="filter_res_country_active_view"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click to add a new country record to import.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_res_country_active"
+            name="Import Locations by Country"
+            parent="contacts.menu_localisation"
+            action="action_res_country_active_view"
+            sequence="50"
+        />
+
+    </data>
+</odoo>

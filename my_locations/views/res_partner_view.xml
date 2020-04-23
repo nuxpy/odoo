@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="view_partner_form_1" model="ir.ui.view">
+            <field name="name">view.partner.form.1</field>
+            <field name="model">res.partner</field>
+            <field name="priority" eval="1"/>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='city']" position="before">
+                    <field name="location_id" placeholder="Location [Zip]" class="o_address_street" options="{'no_create': True, 'no_edit': True, 'no_open': True}"
+                        attrs="{'readonly': [('type', '=', 'contact'), ('parent_id', '!=', False)]}"/>
+                    <field name="province_id" placeholder="Province" class="o_address_street" options="{'no_create': True, 'no_edit': True, 'no_open': True}"
+                        attrs="{'readonly': [('type', '=', 'contact'), ('parent_id', '!=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="before">
+                    <label for="latitude" string="Coordinates"/>
+                    <div class="o_row">
+                        <field name="latitude" placeholder="Latitude" help="Latitude"/>
+                        <field name="longitude" placeholder="Longitude" help="Longitude"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

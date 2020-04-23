@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="tree_res_country_location" model="ir.ui.view">
+            <field name="name">tree.res.country.location</field>
+            <field name="model">res.country.location</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree string="Locations">
+                    <field name="name"/>
+                    <field name="zip"/>
+                    <field name="country_id"/>
+                    <field name="state_id"/>
+                    <field name="province_id"/>
+                    <field name="community_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="form_res_country_location" model="ir.ui.view">
+            <field name="name">form.res.country.location</field>
+            <field name="model">res.country.location</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Location">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" required="1" placeholder="Name of location"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="zip" required="1"/>
+                                <field name="country_id"/>
+                                <field name="state_id" domain="[('country_id', '=', country_id)]"/>
+                                <field name="province_id" domain="[('state_id', '=', state_id)]"/>
+                                <field name="community_id" domain="[('province_id', '=', province_id)]"/>
+                            </group>
+                            <group/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="filter_res_country_location" model="ir.ui.view">
+            <field name="name">filter.res.country.location</field>
+            <field name="model">res.country.location</field>
+            <field name="arch" type="xml">
+                <search string="Locations">
+                    <field name="name" filter_domain="['|', ('name', 'ilike', self), ('zip', 'like', self)]"/>
+                    <field name="zip" filter_domain="[('zip', 'ilike', self)]"/>
+                    <field name="state_id" filter_domain="[('state_id', 'ilike', self)]"/>
+                    <field name="province_id" filter_domain="[('province_id', 'ilike', self)]"/>
+                    <field name="community_id" filter_domain="[('community_id', 'ilike', self)]"/>
+                    <separator/>
+                    <group expand="0" name="group_by" string="Group by">
+                        <filter name="group_by_country" string="Group by country" context="{'group_by': 'country_id'}"/>
+                        <filter name="group_by_state" string="Group by state" context="{'group_by': 'state_id'}"/>
+                        <filter name="group_by_province" string="Group by province" context="{'group_by': 'province_id'}"/>
+                        <filter name="group_by_community" string="Group by community" context="{'group_by': 'community_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_res_country_location" model="ir.actions.act_window">
+            <field name="name">Locations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.country.location</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="filter_res_country_location"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click to add a new location record.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="res_country_location_menu"
+            name="Locations"
+            parent="contacts.menu_localisation"
+            action="action_res_country_location"
+            sequence="49"
+        />
+
+    </data>
+</odoo>

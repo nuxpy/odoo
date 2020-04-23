@@ -1,0 +1,361 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* my_locations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190626\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-23 10:04+0000\n"
+"PO-Revision-Date: 2020-04-23 12:09+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: my_locations
+#: model:ir.model,name:my_locations.model_res_country_state
+msgid "Add methods and fields for State"
+msgstr "Añadir métodos y campos para estados"
+
+#. module: my_locations
+#: model:ir.actions.server,name:my_locations.cron_import_locations_ir_actions_server
+#: model:ir.cron,cron_name:my_locations.cron_import_locations
+#: model:ir.cron,name:my_locations.cron_import_locations
+msgid "Check Import Locations by Country"
+msgstr "Importar localidades por país"
+
+#. module: my_locations
+#: model_terms:ir.actions.act_window,help:my_locations.action_res_country_community
+msgid "Click to add a new community record."
+msgstr "Haga clic para añadir un nuevo registro de comunidad."
+
+#. module: my_locations
+#: model_terms:ir.actions.act_window,help:my_locations.action_res_country_active_view
+msgid "Click to add a new country record to import."
+msgstr "Haga clic para añadir un nuevo registro de importación."
+
+#. module: my_locations
+#: model_terms:ir.actions.act_window,help:my_locations.action_res_country_location
+msgid "Click to add a new location record."
+msgstr "Clic para añadir un nuevo registro de localidad"
+
+#. module: my_locations
+#: model_terms:ir.actions.act_window,help:my_locations.action_res_country_province_view
+msgid "Click to add a new province record."
+msgstr "Haga clic para añadir un nuevo registro de provincia."
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__code
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__code
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__code
+msgid "Code"
+msgstr "Código"
+
+#. module: my_locations
+#: model:ir.actions.act_window,name:my_locations.action_res_country_community
+#: model:ir.model,name:my_locations.model_res_country_community
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__community_ids
+#: model:ir.model.fields,field_description:my_locations.field_res_country_state__community_ids
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_province_view
+msgid "Communities"
+msgstr "Comunidades"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country__community_ids
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__community_id
+#: model:ir.model.fields,field_description:my_locations.field_res_partner__community_id
+#: model:ir.model.fields,field_description:my_locations.field_res_users__community_id
+#: model:ir.ui.menu,name:my_locations.res_country_community_menu
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_community
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_community
+#: model_terms:ir.ui.view,arch_db:my_locations.tree_res_country_community
+msgid "Community"
+msgstr "Comunidad"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.tree_res_country_active_view
+msgid "Contries to Import"
+msgstr "Países para importar"
+
+#. module: my_locations
+#: model:ir.model,name:my_locations.model_res_country
+msgid "Countries"
+msgstr "Países"
+
+#. module: my_locations
+#: model:ir.model,name:my_locations.model_res_country_active
+msgid "Countries to import"
+msgstr "Países para importar"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__country_id
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__country_id
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__country_id
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_active_view
+msgid "Country"
+msgstr "País"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_active_view
+msgid "Country to Import"
+msgstr "País para importar"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__create_uid
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__create_uid
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__create_uid
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__create_date
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__create_date
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__create_date
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__description
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__description
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__description
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__display_name
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__display_name
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__display_name
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_active_view
+msgid "GeoNames"
+msgstr ""
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_community
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_location
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_province_view
+msgid "Group by"
+msgstr "Agrupar por"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_location
+msgid "Group by community"
+msgstr "Agrupar por comunidad"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_community
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_location
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_province_view
+msgid "Group by country"
+msgstr "Agrupar por país"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_community
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_location
+msgid "Group by province"
+msgstr "Agrupar por provincia"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_community
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_location
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_province_view
+msgid "Group by state"
+msgstr "Agrupar por estado"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__id
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__id
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__id
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__id
+msgid "ID"
+msgstr ""
+
+#. module: my_locations
+#: model:ir.actions.act_window,name:my_locations.action_res_country_active_view
+#: model:ir.ui.menu,name:my_locations.menu_res_country_active
+msgid "Import Locations by Country"
+msgstr "Importar localidades por país"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__imported
+msgid "Imported"
+msgstr "Importado"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active____last_update
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community____last_update
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location____last_update
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__write_uid
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__write_uid
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__write_uid
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__write_date
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__write_date
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__write_date
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__latitude
+#: model:ir.model.fields,field_description:my_locations.field_res_partner__latitude
+#: model:ir.model.fields,field_description:my_locations.field_res_users__latitude
+#: model_terms:ir.ui.view,arch_db:my_locations.view_partner_form_1
+msgid "Latitude"
+msgstr "Latitud"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_partner__location_id
+#: model:ir.model.fields,field_description:my_locations.field_res_users__location_id
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_location
+msgid "Location"
+msgstr "Localidad"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.view_partner_form_1
+msgid "Location [Zip]"
+msgstr "Localidad [Código postal]"
+
+#. module: my_locations
+#: model:ir.actions.act_window,name:my_locations.action_res_country_location
+#: model:ir.model,name:my_locations.model_res_country_location
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__location_ids
+#: model:ir.model.fields,field_description:my_locations.field_res_country_state__location_ids
+#: model:ir.ui.menu,name:my_locations.res_country_location_menu
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_location
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_community
+#: model_terms:ir.ui.view,arch_db:my_locations.tree_res_country_location
+msgid "Locations"
+msgstr "Localidades"
+
+#. module: my_locations
+#: model:ir.model,name:my_locations.model_res_partner
+msgid "Locations for res_partner"
+msgstr "Localidades en res_partner"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__longitude
+#: model:ir.model.fields,field_description:my_locations.field_res_partner__longitude
+#: model:ir.model.fields,field_description:my_locations.field_res_users__longitude
+#: model_terms:ir.ui.view,arch_db:my_locations.view_partner_form_1
+msgid "Longitude"
+msgstr "Latitud"
+
+#. module: my_locations
+#: code:addons/my_locations/models/res_country_active.py:53
+#, python-format
+msgid "Missing config parameter, e.g.: http://download.geonames.org/export/zip"
+msgstr "Falta configurar parámetro, ejemplo: http://download.geonames.org/export/zip"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__name
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__name
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__name
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_community
+msgid "Name of community"
+msgstr "Nombre de comunidad"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_active_view
+msgid "Name of country"
+msgstr "Nombre de país"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_location
+msgid "Name of location"
+msgstr "Nombre de localidad"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_province_view
+msgid "Name of province"
+msgstr "Nombre de provincia"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__partner_ids
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__partner_ids
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__partner_ids
+msgid "Partners"
+msgstr "Contacto"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__province_id
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__province_id
+#: model:ir.model.fields,field_description:my_locations.field_res_partner__province_id
+#: model:ir.model.fields,field_description:my_locations.field_res_users__province_id
+#: model:ir.ui.menu,name:my_locations.menu_res_country_province_view
+#: model_terms:ir.ui.view,arch_db:my_locations.filter_res_country_province_view
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_province_view
+#: model_terms:ir.ui.view,arch_db:my_locations.tree_res_country_province_view
+#: model_terms:ir.ui.view,arch_db:my_locations.view_partner_form_1
+msgid "Province"
+msgstr "Provincia"
+
+#. module: my_locations
+#: model:ir.actions.act_window,name:my_locations.action_res_country_province_view
+#: model:ir.model.fields,field_description:my_locations.field_res_country__province_ids
+#: model:ir.model.fields,field_description:my_locations.field_res_country_state__province_ids
+msgid "Provinces"
+msgstr "Provincias"
+
+#. module: my_locations
+#: model:ir.model,name:my_locations.model_res_country_province
+msgid "Provinces of a country"
+msgstr "Provincias de un país"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_community__state_id
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__state_id
+#: model:ir.model.fields,field_description:my_locations.field_res_country_province__state_id
+msgid "State"
+msgstr "Estado"
+
+#. module: my_locations
+#: sql_constraint:res.country.active:0
+msgid "The code must be unique!"
+msgstr "¡El código debe ser único!"
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_active__to_import
+msgid "To import"
+msgstr "Para importar"
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_active_view
+msgid "Warning: This model works when the country will be imported from"
+msgstr "Advertencia: Este modelo funciona cuando el país será importado desde "
+
+#. module: my_locations
+#: model:ir.model.fields,field_description:my_locations.field_res_country_location__zip
+msgid "Zip"
+msgstr "C.P."
+
+#. module: my_locations
+#: model_terms:ir.ui.view,arch_db:my_locations.form_res_country_active_view
+msgid "database. Before create a new record, check if the locations, provinces, and states of a country that you want to import is in the mentioned website."
+msgstr "y su base de datos. Antes de hacer un nuevo registro, revise si las localidades, provincias y estados del país que desea importar está en el sitio web mencionado."

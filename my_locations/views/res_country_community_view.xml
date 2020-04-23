@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="tree_res_country_community" model="ir.ui.view">
+            <field name="name">tree.res.country.community</field>
+            <field name="model">res.country.community</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree string="Community">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="country_id"/>
+                    <field name="state_id"/>
+                    <field name="province_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="form_res_country_community" model="ir.ui.view">
+            <field name="name">form.res.country.community</field>
+            <field name="model">res.country.community</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Community">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" required="1" placeholder="Name of community"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code" required="1"/>
+                                <field name="country_id"/>
+                                <field name="state_id" domain="[('country_id', '=', country_id)]"/>
+                                <field name="province_id" domain="[('state_id', '=', state_id)]"/>
+                            </group>
+                            <group/>
+                        </group>
+                        <notebook>
+                            <page string="Locations">
+                                <field name="location_ids" nolabel="1">
+                                    <tree create="false" edit="false">
+                                        <field name="name"/>
+                                        <field name="zip"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="filter_res_country_community" model="ir.ui.view">
+            <field name="name">filter.res.country.community</field>
+            <field name="model">res.country.community</field>
+            <field name="arch" type="xml">
+                <search string="Community">
+                    <field name="name" filter_domain="[('name', 'ilike', self)]"/>
+                    <separator/>
+                    <group expand="0" name="group_by" string="Group by">
+                        <filter name="group_by_country" string="Group by country" context="{'group_by': 'country_id'}"/>
+                        <filter name="group_by_state" string="Group by state" context="{'group_by': 'state_id'}"/>
+                        <filter name="group_by_province" string="Group by province" context="{'group_by': 'province_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_res_country_community" model="ir.actions.act_window">
+            <field name="name">Communities</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.country.community</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="filter_res_country_community"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click to add a new community record.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="res_country_community_menu"
+            name="Community"
+            parent="contacts.menu_localisation"
+            action="action_res_country_community"
+            sequence="48"
+        />
+
+    </data>
+</odoo>

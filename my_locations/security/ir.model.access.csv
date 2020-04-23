@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_country_community_users,access_res_country_community,model_res_country_community,base.group_user,1,0,0,0
+access_res_country_community_manager,access_res_country_community,model_res_country_community,base.group_erp_manager,1,1,1,1
+access_res_country_location_users,access_res_country_location,model_res_country_location,base.group_user,1,0,0,0
+access_res_country_location_manager,access_res_country_location,model_res_country_location,base.group_erp_manager,1,1,1,1
+access_res_country_province,access_res_country_province,model_res_country_province,base.group_user,1,0,0,0
+access_res_country_province_manager,access_res_country_province,model_res_country_province,base.group_erp_manager,1,1,1,1
+access_res_country_active,access_res_country_active,model_res_country_active,base.group_user,1,0,0,0
+access_res_country_active_manager,access_res_country_active,model_res_country_active,base.group_erp_manager,1,1,1,1
