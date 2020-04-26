@@ -18,14 +18,12 @@ class HrEmployee(models.Model):
     
     age = fields.Integer('Age', compute='_calc_age', default=0)
     
-    def _calc_age_raw(self, date_issue):
-        age = 0
-        date_today = date.today()
-        if date_today.__gt__(date_issue):
-            age = str(date_today.__sub__(date_issue) / 365).split()[0]
-        return age
-    
+    @api.depends('birthday')
     def _calc_age(self):
-        for r in self:
-            if r.birthday:
-                r.age = self._calc_age_raw(r.birthday)
+        for rec in self:
+            age = 0
+            if rec.birthday:
+                date_today = date.today()
+                if date_today.__ge__(rec.birthday):
+                    age = date_today.__sub__(rec.birthday).days / 365
+            rec.age = age
