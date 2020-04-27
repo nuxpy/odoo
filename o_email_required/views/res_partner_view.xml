@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="form_res_partner_view_1" model="ir.ui.view">
+            <field name="name">form.res.partner.view.1</field>
+            <field name="model">res.partner</field>
+            <field name="priority" eval="1"/>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="attributes">
+                    <attribute name="required">1</attribute>
+                    <attribute name="placeholder">email@nuxpy.com</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
