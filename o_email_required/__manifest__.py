@@ -3,7 +3,7 @@
     'name': 'O Email Required',
     'version': '0.1',
     'category': 'Hidden',
-    'application': True,
+    'application': False,
     'author': 'nuxpy',
     'contributors': [
         'Félix Urbina <furbina@nuxpy.com>'

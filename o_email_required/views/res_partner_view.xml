@@ -2,15 +2,15 @@
 <odoo>
     <data>
 
-        <record id="form_res_partner_view_1" model="ir.ui.view">
-            <field name="name">form.res.partner.view.1</field>
+        <record id="form_res_partner_view_email" model="ir.ui.view">
+            <field name="name">form.res.partner.view.email</field>
             <field name="model">res.partner</field>
-            <field name="priority" eval="1"/>
+            <field name="priority" eval="100"/>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='email']" position="attributes">
-                    <attribute name="required">1</attribute>
-                    <attribute name="placeholder">email@nuxpy.com</attribute>
+                    <attribute name="required">True</attribute>
+                    <attribute name="placeholder">username@nuxpy.com</attribute>
                 </xpath>
             </field>
         </record>
